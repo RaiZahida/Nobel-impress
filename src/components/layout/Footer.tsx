@@ -12,6 +12,7 @@ export function Footer() {
           <h4 className="font-headline text-md font-semibold">Quick Links</h4>
           <Link href="/" className="text-muted-foreground hover:text-foreground">Home</Link>
           <Link href="/categories" className="text-muted-foreground hover:text-foreground">Categories</Link>
+          <Link href="/about" className="text-muted-foreground hover:text-foreground">About Us</Link>
           <Link href="/contact" className="text-muted-foreground hover:text-foreground">Contact Us</Link>
         </div>
         <div className="flex flex-col gap-2">
