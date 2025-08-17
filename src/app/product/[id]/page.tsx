@@ -4,6 +4,9 @@ import Image from 'next/image';
 import { ProductDetails } from '@/components/ProductDetails';
 import { RecommendedProducts } from '@/components/RecommendedProducts';
 import { Suspense } from 'react';
+import Link from 'next/link';
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
+
 
 type ProductPageProps = {
   params: {
@@ -20,6 +23,31 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   return (
     <div className="container mx-auto px-4 md:px-6 py-12">
+      <Breadcrumb className="mb-8">
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href="/">Home</Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+             <BreadcrumbLink asChild>
+              <Link href="/categories">Categories</Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href={`/categories/${encodeURIComponent(product.category)}`}>{product.category}</Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>{product.name}</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
       <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-start">
         <div className="aspect-square rounded-lg overflow-hidden border bg-secondary">
           <Image
