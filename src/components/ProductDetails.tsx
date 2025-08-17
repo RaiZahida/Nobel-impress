@@ -5,7 +5,8 @@ import type { Product } from '@/lib/products';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/CartContext';
 import { useToast } from '@/hooks/use-toast';
-import { Check, ShoppingCart } from 'lucide-react';
+import { Check, ShoppingCart, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 type ProductDetailsProps = {
   product: Product;
@@ -47,6 +48,11 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               <ShoppingCart className="mr-2 h-5 w-5" /> Add to Cart
             </>
           )}
+        </Button>
+        <Button asChild size="lg" variant="outline">
+          <Link href={`/checkout/${product.id}`}>
+            Order Now <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </Button>
       </div>
     </div>

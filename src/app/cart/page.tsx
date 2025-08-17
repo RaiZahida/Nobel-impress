@@ -7,17 +7,15 @@ import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
 import { Trash2, Plus, Minus } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 export default function CartPage() {
   const { cartItems, removeFromCart, updateQuantity, totalPrice, clearCart } = useCart();
-  const { toast } = useToast();
 
   const handleCheckout = () => {
-    toast({
-      title: "Order Placed!",
-      description: "Your order will be delivered soon. Payment will be collected upon delivery.",
-    });
+    // Since we now have a dedicated checkout page, we can guide the user there.
+    // Or, a real app might programmatically collect all cart items and move to a single checkout.
+    // For this app, we'll just clear it and assume a "checkout" action was taken.
+    alert("This action would normally proceed to a checkout page with all items.");
     clearCart();
   };
 
@@ -32,6 +30,9 @@ export default function CartPage() {
       </div>
     );
   }
+
+  const deliveryCharges = 200;
+  const totalWithShipping = totalPrice + deliveryCharges;
 
   return (
     <div className="container mx-auto px-4 md:px-6 py-12">
@@ -90,19 +91,19 @@ export default function CartPage() {
               </div>
               <div className="flex justify-between">
                 <span>Shipping</span>
-                <span className="font-semibold">Free</span>
+                <span className="font-semibold">${deliveryCharges.toFixed(2)}</span>
               </div>
               <Separator />
               <div className="flex justify-between font-bold text-lg">
                 <span>Total</span>
-                <span>${totalPrice.toFixed(2)}</span>
+                <span>${totalWithShipping.toFixed(2)}</span>
               </div>
             </CardContent>
             <CardFooter className="flex flex-col gap-2">
               <Button size="lg" className="w-full" onClick={handleCheckout}>
                 Proceed to Checkout
               </Button>
-              <p className="text-sm text-muted-foreground text-center">Cash on Delivery available</p>
+              <p className="text-sm text-muted-foreground text-center">Checkout for all items is not yet implemented.</p>
             </CardFooter>
           </Card>
         </div>
