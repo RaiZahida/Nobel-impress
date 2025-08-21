@@ -59,13 +59,6 @@ export default function CheckoutPage() {
     if (isProcessing) return;
     setIsProcessing(true);
 
-    // Optimistically update the UI
-    setIsOrderPlaced(true);
-    toast({
-      title: 'Order Placed!',
-      description: 'Your order has been received. We will contact you for confirmation.',
-    });
-
     try {
       // Add a new document with a generated id.
       await addDoc(collection(firestore, "orders"), {
@@ -78,14 +71,19 @@ export default function CheckoutPage() {
         orderDate: serverTimestamp(),
         status: 'pending',
       });
+
+      // On successful submission, update UI
+      setIsOrderPlaced(true);
+      toast({
+        title: 'Order Placed!',
+        description: 'Your order has been received. We will contact you for confirmation.',
+      });
+
     } catch (e) {
       console.error("Error adding document: ", e);
-      // If the DB call fails, the user has already seen the success message.
-      // We log the error for maintenance but don't disrupt the user.
-      // A more robust solution might involve a background sync/retry mechanism.
        toast({
-        title: 'Sync Failed',
-        description: 'Your order is saved and will be processed shortly.',
+        title: 'Order Failed',
+        description: 'Could not place your order. Please try again.',
         variant: 'destructive',
       });
     } finally {
