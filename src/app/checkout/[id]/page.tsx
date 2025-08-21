@@ -14,6 +14,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { useToast } from '@/hooks/use-toast';
 import Image from 'next/image';
 import { Separator } from '@/components/ui/separator';
+import { firestore } from '@/lib/firebase';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 const checkoutSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -31,6 +33,7 @@ export default function CheckoutPage() {
   const [product] = useState<Product | undefined>(getProductById(id));
   const [isOrderPlaced, setIsOrderPlaced] = useState(false);
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<CheckoutFormValues>({
     resolver: zodResolver(checkoutSchema),
@@ -50,14 +53,36 @@ export default function CheckoutPage() {
   const deliveryCharges = 200;
   const total = product.price + deliveryCharges;
 
-  const onSubmit = (data: CheckoutFormValues) => {
-    console.log('Order Details:', data);
-    // Here you would typically send the data to your backend/database
-    toast({
-      title: 'Order Placed!',
-      description: 'Your order has been received. We will contact you for confirmation.',
-    });
-    setIsOrderPlaced(true);
+  const onSubmit = async (data: CheckoutFormValues) => {
+    setIsSubmitting(true);
+    try {
+      // Add a new document with a generated id.
+      await addDoc(collection(firestore, "orders"), {
+        ...data,
+        productId: product.id,
+        productName: product.name,
+        price: product.price,
+        deliveryCharges,
+        total,
+        orderDate: serverTimestamp(),
+        status: 'pending',
+      });
+
+      toast({
+        title: 'Order Placed!',
+        description: 'Your order has been received. We will contact you for confirmation.',
+      });
+      setIsOrderPlaced(true);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+      toast({
+        title: 'Order Failed',
+        description: 'There was an issue placing your order. Please try again.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   if (isOrderPlaced) {
@@ -155,8 +180,8 @@ export default function CheckoutPage() {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" size="lg" className="w-full">
-                    Confirm Order
+                  <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? 'Placing Order...' : 'Confirm Order'}
                   </Button>
                 </form>
               </Form>
