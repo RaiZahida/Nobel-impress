@@ -1,0 +1,14 @@
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow anyone to create an order.
+    // In a real app, you would want to lock this down further.
+    // For example, you might require authentication.
+    match /orders/{orderId} {
+      allow create: if true;
+      allow read, write, delete: if false;
+    }
+  }
+}
