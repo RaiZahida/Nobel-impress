@@ -11,7 +11,7 @@ const testimonials = [
   {
     name: 'Jessica M.',
     avatar: 'https://placehold.co/100x100.png',
-    text: 'I absolutely love my new tote from Bag Bliss! The quality is outstanding, and it\'s the perfect size for my daily essentials. I get compliments everywhere I go!',
+    text: 'I absolutely love my new tote from Nobel IMpress! The quality is outstanding, and it\'s the perfect size for my daily essentials. I get compliments everywhere I go!',
     initials: 'JM',
   },
   {
@@ -83,7 +83,7 @@ export default function Home() {
            <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
              <Image
                 src="https://placehold.co/600x450.png"
-                alt="Bag Bliss workshop"
+                alt="Nobel IMpress workshop"
                 layout="fill"
                 objectFit="cover"
                 data-ai-hint="leather workshop"
@@ -92,7 +92,7 @@ export default function Home() {
            <div>
              <h2 className="font-headline text-3xl md:text-4xl font-bold">Crafted with Passion</h2>
              <p className="mt-4 text-lg text-muted-foreground">
-              At Bag Bliss, we believe a bag is more than just an accessory—it's a companion. We're dedicated to designing and curating beautiful, functional, and durable bags that you'll love for years to come.
+              At Nobel IMpress, we believe a bag is more than just an accessory—it's a companion. We're dedicated to designing and curating beautiful, functional, and durable bags that you'll love for years to come.
              </p>
              <Button asChild size="lg" className="mt-6">
                 <Link href="/about">Learn More About Us</Link>

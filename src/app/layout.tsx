@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/Footer';
 import { CartProvider } from '@/context/CartContext';
 
 export const metadata: Metadata = {
-  title: 'Bag Bliss',
+  title: 'Nobel IMpress',
   description: 'Discover your next favorite bag.',
 };
 

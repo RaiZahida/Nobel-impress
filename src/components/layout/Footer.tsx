@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="bg-secondary/50 border-t mt-auto">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 py-12 md:px-6">
         <div className="flex flex-col gap-2">
-          <h3 className="font-headline text-lg font-bold">Bag Bliss</h3>
+          <h3 className="font-headline text-lg font-bold">Nobel IMpress</h3>
           <p className="text-muted-foreground max-w-xs">Your one-stop shop for stylish, high-quality bags for every occasion.</p>
         </div>
         <div className="flex flex-col gap-2">
@@ -23,7 +23,7 @@ export function Footer() {
       </div>
       <div className="bg-secondary/80 py-4">
         <div className="container mx-auto text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Bag Bliss. All rights reserved.
+          © {new Date().getFullYear()} Nobel IMpress. All rights reserved.
         </div>
       </div>
     </footer>

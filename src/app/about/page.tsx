@@ -30,7 +30,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 bg-secondary/30">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline text-4xl md:text-6xl font-bold">About Bag Bliss</h1>
+          <h1 className="font-headline text-4xl md:text-6xl font-bold">About Nobel IMpress</h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
             We believe that a bag is more than just an accessory—it's a statement, a companion, and an essential part of your journey.
           </p>
@@ -44,7 +44,7 @@ export default function AboutPage() {
             <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Our Story</h2>
             <div className="space-y-4 text-muted-foreground text-lg">
               <p>
-                Founded in 2021, Bag Bliss started with a simple idea: to create beautiful, high-quality bags that don't compromise on functionality. Our founder, a passionate designer and avid traveler, grew tired of choosing between style and practicality. Why not have both?
+                Founded in 2021, Nobel IMpress started with a simple idea: to create beautiful, high-quality bags that don't compromise on functionality. Our founder, a passionate designer and avid traveler, grew tired of choosing between style and practicality. Why not have both?
               </p>
               <p>
                 From a small workshop to a growing online brand, our commitment has remained the same. We meticulously source the best materials and work with skilled artisans to craft bags that are built to last and designed to be loved.
