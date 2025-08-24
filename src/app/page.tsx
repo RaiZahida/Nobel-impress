@@ -53,15 +53,15 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="relative h-64 md:h-auto">
+          <div className="relative h-64 md:h-auto aspect-square">
             <Image
-              src="https://placehold.co/600x400.png"
-              alt="Stylish woman carrying a handbag"
+              src="/images/hero-deal.png"
+              alt="Best deal on bag sets from Nobel Impress"
               width={600}
-              height={400}
+              height={600}
               priority
               className="rounded-lg shadow-2xl object-cover w-full h-full"
-              data-ai-hint="woman handbag"
+              data-ai-hint="bag set"
             />
           </div>
         </div>
