@@ -55,13 +55,13 @@ export default function Home() {
           </div>
           <div className="relative h-64 md:h-auto aspect-square">
             <Image
-              src="/images/hero-deal.png"
-              alt="Best deal on bag sets from Nobel Impress"
+              src="https://placehold.co/600x400.png"
+              alt="A stylish bag on a colorful background"
               width={600}
-              height={600}
+              height={400}
               priority
               className="rounded-lg shadow-2xl object-cover w-full h-full"
-              data-ai-hint="bag set"
+              data-ai-hint="stylish bag"
             />
           </div>
         </div>
