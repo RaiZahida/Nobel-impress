@@ -45,13 +45,14 @@ export default function CartPage() {
                 {cartItems.map(item => (
                   <li key={item.product.id} className="flex items-center gap-4 p-4">
                     <div className="aspect-square w-24 h-24 rounded-md overflow-hidden border bg-secondary">
-                      <Image
-                        src={item.product.image}
-                        alt={item.product.name}
-                        width={100}
-                        height={100}
-                        className="object-cover w-full h-full"
-                      />
+                    <Image
+  src="/images/hero-pic.jpeg"
+  alt="Hero Pic"
+  width={500}
+  height={500}
+  className="object-cover w-full h-full"
+/>
+
                     </div>
                     <div className="flex-grow grid gap-1">
                       <Link href={`/product/${item.product.id}`} className="font-headline font-semibold hover:underline">{item.product.name}</Link>

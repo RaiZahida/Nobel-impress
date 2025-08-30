@@ -5,6 +5,7 @@ import { ShoppingBag, Menu, X, Briefcase } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { Button } from "@/components/ui/button";
 import React, { useState } from "react";
+import Image from "next/image"  ;
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -22,7 +23,7 @@ export function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Briefcase className="h-6 w-6 text-primary" />
-          <span className="font-headline text-2xl font-bold text-foreground">Nobel IMpress</span>
+          <span className="font-headline text-2xl font-bold text-foreground">Nobel Impress</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map(link => (

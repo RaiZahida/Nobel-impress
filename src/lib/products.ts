@@ -12,37 +12,37 @@ export type Product = {
 export const products: Product[] = [
   {
     id: '1',
-    name: 'The Classic Tote',
-    price: 129.99,
+    name: '4-in-1-begset',
+    price: 3150.00,
     description: 'A timeless classic, this tote is perfect for everyday use. Made from genuine leather, it features a spacious interior and multiple pockets for organization.',
-    image: 'https://placehold.co/800x800.png',
+    image: '/images/product1.jpeg',
     category: 'Totes',
     dataAiHint: 'leather tote'
   },
   {
     id: '2',
-    name: 'Urban Crossbody',
-    price: 79.99,
+    name: '4-in-1-begset',
+    price:2999,
     description: 'Sleek and modern, the Urban Crossbody is designed for the city-goer. Its compact size holds all your essentials without weighing you down.',
-    image: 'https://placehold.co/800x800.png',
+    image: '/images/product2.jpeg',
     category: 'Crossbody',
     dataAiHint: 'modern crossbody'
   },
   {
     id: '3',
-    name: 'Adventure Backpack',
-    price: 159.99,
+    name: '4-in-1-begset ',
+    price: 2999,
     description: 'Ready for anything, this durable backpack is your ideal companion for travel and adventure. Features a padded laptop sleeve and water-resistant fabric.',
-    image: 'https://placehold.co/800x800.png',
+    image: '/images/product3.jpeg',
     category: 'Backpacks',
     dataAiHint: 'travel backpack'
   },
   {
     id: '4',
-    name: 'Evening Clutch',
-    price: 99.99,
+    name: '4-in-1-begset',
+    price:2999,
     description: 'Add a touch of elegance to your evening wear with this stunning clutch. Features a delicate chain strap and a secure clasp closure.',
-    image: 'https://placehold.co/800x800.png',
+    image: '/images/product4.jpeg',
     category: 'Clutches',
     dataAiHint: 'elegant clutch'
   },
@@ -51,7 +51,7 @@ export const products: Product[] = [
     name: 'Bohemian Hobo',
     price: 119.99,
     description: 'Casual and chic, the Bohemian Hobo bag has a relaxed silhouette and is made from soft, supple suede. Perfect for a laid-back, stylish look.',
-    image: 'https://placehold.co/800x800.png',
+    image: '/images/product5.jpeg',
     category: 'Hobo Bags',
     dataAiHint: 'suede hobo'
   },
@@ -60,7 +60,7 @@ export const products: Product[] = [
     name: 'The Minimalist Satchel',
     price: 149.99,
     description: 'Clean lines and a structured shape define this minimalist satchel. A sophisticated choice for work or weekend outings.',
-    image: 'https://placehold.co/800x800.png',
+    image: '/images/product6.jpeg',
     category: 'Satchels',
     dataAiHint: 'minimalist satchel'
   },
@@ -69,7 +69,7 @@ export const products: Product[] = [
     name: 'Weekender Duffle',
     price: 199.99,
     description: 'Spacious and stylish, our Weekender Duffle is perfect for short getaways. Crafted from durable canvas with leather accents.',
-    image: 'https://placehold.co/800x800.png',
+    image: '/images/product7.jpeg',
     category: 'Duffles',
     dataAiHint: 'canvas duffle'
   },
@@ -78,7 +78,7 @@ export const products: Product[] = [
     name: 'Festival Fanny Pack',
     price: 49.99,
     description: 'Keep your hands free and your style on point with this trendy fanny pack. Ideal for concerts, festivals, or a day out.',
-    image: 'https://placehold.co/800x800.png',
+    image: '/images/product8.jpeg',
     category: 'Fanny Packs',
     dataAiHint: 'trendy fannypack'
   },
@@ -87,7 +87,7 @@ export const products: Product[] = [
     name: 'Canvas Market Tote',
     price: 89.99,
     description: 'Eco-friendly and spacious, this canvas tote is perfect for your farmers market trips or a day at the beach. Sturdy and washable.',
-    image: 'https://placehold.co/800x800.png',
+    image: '/images/product8.jpeg',
     category: 'Totes',
     dataAiHint: 'canvas tote'
   },
