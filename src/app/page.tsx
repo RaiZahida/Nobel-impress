@@ -55,7 +55,7 @@ export default function Home() {
           </div>
           <div className="relative h-64 md:h-auto aspect-square">
             <Image
-              src="/images/product2.jpeg"
+              src="/images/product1.jpeg"
               alt="A stylish bag on a colorful background"
               width={600}
               height={400}

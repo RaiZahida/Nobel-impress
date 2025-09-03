@@ -1,3 +1,5 @@
+"use client";
+
 import dynamic from 'next/dynamic';
 import { Product } from '@/lib/products';
 
@@ -16,7 +18,6 @@ const ProductCard = dynamic(() => import('./ProductCard').then(mod => ({ default
       </div>
     </div>
   ),
-  ssr: false, // Disable SSR for this component to improve initial load
 });
 
 type LazyProductCardProps = {

@@ -4,8 +4,7 @@ import Link from "next/link";
 import { ShoppingBag, Menu, X, Briefcase } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { Button } from "@/components/ui/button";
-import React, { useState } from "react";
-import Image from "next/image"  ;
+import React, { useState, memo } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -14,12 +13,12 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-export function Header() {
+const Header = memo(function Header() {
   const { cartCount } = useCart();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-40 w-full border-b">
+    <header className="bg-background sticky top-0 z-40 w-full border-b">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Briefcase className="h-6 w-6 text-primary" />
@@ -51,7 +50,7 @@ export function Header() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-background border-t">
+        <div className="md:hidden bg-background border-t transition-all duration-300 ease-in-out">
           <nav className="flex flex-col items-center gap-4 p-4">
             {navLinks.map(link => (
               <Link key={link.href} href={link.href} onClick={() => setIsMenuOpen(false)} className="font-headline text-lg text-muted-foreground transition-colors hover:text-foreground">
@@ -63,4 +62,6 @@ export function Header() {
       )}
     </header>
   );
-}
+});
+
+export { Header };
