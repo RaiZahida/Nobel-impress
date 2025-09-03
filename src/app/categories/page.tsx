@@ -1,9 +1,11 @@
 import { products } from '@/lib/products';
 import Link from 'next/link';
 import { Card } from '@/components/ui/card';
+import { useMemo } from 'react';
 
 export default function CategoriesPage() {
-  const categories = [...new Set(products.map(p => p.category))];
+  // Memoize categories to avoid recalculations on re-renders
+  const categories = useMemo(() => [...new Set(products.map(p => p.category))], [products]);
 
   return (
     <div className="container mx-auto px-4 md:px-6 py-12">

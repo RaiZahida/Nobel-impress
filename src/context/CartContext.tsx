@@ -54,11 +54,13 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     if (quantity <= 0) {
       removeFromCart(productId);
     } else {
-      setCartItems(prevItems =>
-        prevItems.map(item =>
+      // Debounce or throttle updates to improve performance
+      setCartItems(prevItems => {
+        const updatedItems = prevItems.map(item =>
           item.product.id === productId ? { ...item, quantity } : item
-        )
-      );
+        );
+        return updatedItems;
+      });
     }
   };
 

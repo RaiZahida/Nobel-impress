@@ -2,11 +2,8 @@ import { getProductById } from '@/lib/products';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { ProductDetails } from '@/components/ProductDetails';
-import { RecommendedProducts } from '@/components/RecommendedProducts';
-import { Suspense } from 'react';
 import Link from 'next/link';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
-
 
 type ProductPageProps = {
   params: {
@@ -55,18 +52,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
             alt={product.name}
             width={800}
             height={800}
+            quality={90}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+IRjWjBqO6O2mhP//Z"
             className="w-full h-full object-cover"
             data-ai-hint={product.dataAiHint}
           />
         </div>
         <ProductDetails product={product} />
-      </div>
-
-      <div className="mt-16 md:mt-24">
-         <h2 className="font-headline text-3xl font-bold text-center mb-8">You Might Also Like</h2>
-         <Suspense fallback={<RecommendedProducts.Skeleton />}>
-           <RecommendedProducts currentProduct={product} />
-         </Suspense>
       </div>
     </div>
   );

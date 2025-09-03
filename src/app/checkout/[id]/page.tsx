@@ -213,21 +213,21 @@ export default function CheckoutPage() {
                    <p className="font-semibold">{product.name}</p>
                    <p className="text-sm text-muted-foreground">Quantity: 1</p>
                  </div>
-                 <p className="font-semibold">${product.price.toFixed(2)}</p>
+                 <p className="font-semibold">Rs {product.price.toFixed(2)}</p>
                </div>
               <Separator />
               <div className="flex justify-between">
                 <span>Product Price</span>
-                <span className="font-semibold">${product.price.toFixed(2)}</span>
+                <span className="font-semibold">Rs {product.price.toFixed(2)}</span>
               </div>
               <div className="flex justify-between">
                 <span>Delivery Charges</span>
-                <span className="font-semibold">${deliveryCharges.toFixed(2)}</span>
+                <span className="font-semibold">Rs {deliveryCharges.toFixed(2)}</span>
               </div>
               <Separator />
               <div className="flex justify-between font-bold text-lg">
                 <span>Total Amount</span>
-                <span>${total.toFixed(2)}</span>
+                <span>Rs {total.toFixed(2)}</span>
               </div>
             </CardContent>
              <CardFooter>

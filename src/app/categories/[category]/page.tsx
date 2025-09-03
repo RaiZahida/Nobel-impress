@@ -1,5 +1,5 @@
 import { getProductsByCategory, products } from '@/lib/products';
-import { ProductCard } from '@/components/ProductCard';
+import { LazyProductCard } from '@/components/LazyProductCard';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
@@ -46,7 +46,7 @@ export default function CategoryPage({ params }: { params: { category: string } 
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {categoryProducts.map(product => (
-          <ProductCard key={product.id} product={product} />
+          <LazyProductCard key={product.id} product={product} />
         ))}
       </div>
     </div>

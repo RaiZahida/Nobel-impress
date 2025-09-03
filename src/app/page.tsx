@@ -1,4 +1,4 @@
-import { ProductCard } from '@/components/ProductCard';
+import { LazyProductCard } from '@/components/LazyProductCard';
 import { products } from '@/lib/products';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,19 +10,19 @@ import { ArrowRight } from 'lucide-react';
 const testimonials = [
   {
     name: 'Jessica M.',
-    avatar: 'https://placehold.co/100x100.png',
-    text: 'I absolutely love my new tote from Nobel IMpress! The quality is outstanding, and it\'s the perfect size for my daily essentials. I get compliments everywhere I go!',
+    avatar: '/images/girl 1.png',
+    text: 'I absolutely love my new tote from Nobel Impress! The quality is outstanding, and it\'s the perfect size for my daily essentials. I get compliments everywhere I go!',
     initials: 'JM',
   },
   {
     name: 'Sarah L.',
-    avatar: 'https://placehold.co/100x100.png',
+    avatar: '/images/girl 2.png',
     text: 'The Adventure Backpack is a game-changer for my weekend trips. It\'s stylish, durable, and surprisingly spacious. Highly recommend!',
     initials: 'SL',
   },
   {
     name: 'Emily R.',
-    avatar: 'https://placehold.co/100x100.png',
+    avatar: '/images/girl 3.png',
     text: 'I ordered the Evening Clutch for a wedding, and it was perfect. Elegant, well-made, and just the right size for my phone and lipstick. The shipping was fast too!',
     initials: 'ER',
   }
@@ -55,10 +55,11 @@ export default function Home() {
           </div>
           <div className="relative h-64 md:h-auto aspect-square">
             <Image
-              src="https://placehold.co/600x400.png"
+              src="/images/product2.jpeg"
               alt="A stylish bag on a colorful background"
               width={600}
               height={400}
+              quality={90}
               priority
               className="rounded-lg shadow-2xl object-cover w-full h-full"
               data-ai-hint="stylish bag"
@@ -72,7 +73,7 @@ export default function Home() {
         <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-10">New Arrivals</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {newArrivals.map(product => (
-            <ProductCard key={product.id} product={product} />
+            <LazyProductCard key={product.id} product={product} />
           ))}
         </div>
       </section>
@@ -82,10 +83,11 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
            <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
              <Image
-                src="https://placehold.co/600x450.png"
+                src="/images/passion.png"
                 alt="Nobel IMpress workshop"
-                layout="fill"
-                objectFit="cover"
+                fill
+                quality={85}
+                className="object-cover"
                 data-ai-hint="leather workshop"
               />
            </div>
@@ -106,7 +108,7 @@ export default function Home() {
          <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-10">Featured Collection</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {featuredProducts.map(product => (
-            <ProductCard key={product.id} product={product} />
+            <LazyProductCard key={product.id} product={product} />
           ))}
         </div>
       </div>

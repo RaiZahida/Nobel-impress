@@ -5,22 +5,25 @@ import { Award, Target, Users } from 'lucide-react';
 
 const teamMembers = [
   {
-    name: 'Alice Johnson',
+    name: 'Noor Fatima',
     role: 'Founder & Lead Designer',
-    avatar: 'https://placehold.co/150x150.png',
-    initials: 'AJ',
+    avatar: '/images/girl 1.png',
+    initials: 'NF',
+    style: 'rounded-full object-cover w-32 h-32 mx-auto mb-4 border-4 border-secondary'
   },
   {
-    name: 'David Chen',
+    name: 'Esha Fatima',
     role: 'Head of Operations',
-    avatar: 'https://placehold.co/150x150.png',
-    initials: 'DC',
+    avatar: '/images/girl 2.png',
+    initials: 'EF',
+    style: 'rounded-full object-cover w-32 h-32 mx-auto mb-4 border-4 border-secondary'
   },
   {
-    name: 'Maria Garcia',
+    name: 'Zahida',
     role: 'Marketing Director',
-    avatar: 'https://placehold.co/150x150.png',
-    initials: 'MG',
+    avatar: '/images/girl 3.png',
+    initials: 'Z',
+    style: 'rounded-full object-cover w-32 h-32 mx-auto mb-4 border-4 border-secondary'
   },
 ];
 
@@ -51,13 +54,13 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="order-1 md:order-2 relative aspect-square rounded-lg overflow-hidden shadow-lg">
-            <Image 
-              src="https://placehold.co/500x500.png"
-              alt="Founder working on a bag design"
+          <div className="order-1 md:order-2 relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src="/images/about.png"
+              alt="Our story image"
               layout="fill"
               objectFit="cover"
-              data-ai-hint="designer sketching"
+              data-ai-hint="our story image"
             />
           </div>
         </div>

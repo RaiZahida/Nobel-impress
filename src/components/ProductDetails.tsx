@@ -33,7 +33,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
         <span className="text-sm font-medium text-primary uppercase tracking-wider">{product.category}</span>
         <h1 className="font-headline text-4xl md:text-5xl font-bold mt-2">{product.name}</h1>
       </div>
-      <p className="text-3xl font-bold text-foreground">${product.price.toFixed(2)}</p>
+        <p className="text-3xl font-bold text-foreground">Rs {product.price.toFixed(2)}</p>
       <div className="text-muted-foreground leading-relaxed">
         <p>{product.description}</p>
       </div>

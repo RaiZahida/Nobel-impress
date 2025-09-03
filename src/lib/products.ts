@@ -12,183 +12,300 @@ export type Product = {
 export const products: Product[] = [
   {
     id: '1',
-    name: '4-in-1-begset',
-    price: 3150.00,
-    description: 'A timeless classic, this tote is perfect for everyday use. Made from genuine leather, it features a spacious interior and multiple pockets for organization.',
-    image: '/images/product1.jpeg',
+    name: 'Shoulder Bag',
+    price: 2800,
+    description: 'A stylish shoulder bag made of canvas with pattern printed, offering durability and a trendy look for everyday carry.',
+    image: '/images/totes 1.jpeg',
     category: 'Totes',
-    dataAiHint: 'leather tote'
+    dataAiHint: 'canvas shoulder bag'
   },
-  {
-    id: '2',
-    name: '4-in-1-begset',
-    price:2999,
-    description: 'Sleek and modern, the Urban Crossbody is designed for the city-goer. Its compact size holds all your essentials without weighing you down.',
-    image: '/images/product2.jpeg',
-    category: 'Crossbody',
-    dataAiHint: 'modern crossbody'
-  },
-  {
-    id: '3',
-    name: '4-in-1-begset ',
-    price: 2999,
-    description: 'Ready for anything, this durable backpack is your ideal companion for travel and adventure. Features a padded laptop sleeve and water-resistant fabric.',
-    image: '/images/product3.jpeg',
-    category: 'Backpacks',
-    dataAiHint: 'travel backpack'
-  },
-  {
-    id: '4',
-    name: '4-in-1-begset',
-    price:2999,
-    description: 'Add a touch of elegance to your evening wear with this stunning clutch. Features a delicate chain strap and a secure clasp closure.',
-    image: '/images/product4.jpeg',
-    category: 'Clutches',
-    dataAiHint: 'elegant clutch'
-  },
+
+
   {
     id: '5',
-    name: 'Bohemian Hobo',
-    price: 119.99,
-    description: 'Casual and chic, the Bohemian Hobo bag has a relaxed silhouette and is made from soft, supple suede. Perfect for a laid-back, stylish look.',
-    image: '/images/product5.jpeg',
-    category: 'Hobo Bags',
-    dataAiHint: 'suede hobo'
+    name: 'Single Bag 1',
+    price: 2500,
+    description: 'A sleek and stylish single bag designed for modern lifestyles. Features a compact design with ample space for your essentials, perfect for daily commutes or casual outings.',
+    image: '/images/singel-1.jpeg',
+    category: 'Single Bags',
+    dataAiHint: 'modern single bag'
   },
-  {
-    id: '6',
-    name: 'The Minimalist Satchel',
-    price: 149.99,
-    description: 'Clean lines and a structured shape define this minimalist satchel. A sophisticated choice for work or weekend outings.',
-    image: '/images/product6.jpeg',
-    category: 'Satchels',
-    dataAiHint: 'minimalist satchel'
-  },
-    {
-    id: '7',
-    name: 'Weekender Duffle',
-    price: 199.99,
-    description: 'Spacious and stylish, our Weekender Duffle is perfect for short getaways. Crafted from durable canvas with leather accents.',
-    image: '/images/product7.jpeg',
-    category: 'Duffles',
-    dataAiHint: 'canvas duffle'
-  },
-  {
-    id: '8',
-    name: 'Festival Fanny Pack',
-    price: 49.99,
-    description: 'Keep your hands free and your style on point with this trendy fanny pack. Ideal for concerts, festivals, or a day out.',
-    image: '/images/product8.jpeg',
-    category: 'Fanny Packs',
-    dataAiHint: 'trendy fannypack'
-  },
+
+
   {
     id: '9',
-    name: 'Canvas Market Tote',
-    price: 89.99,
-    description: 'Eco-friendly and spacious, this canvas tote is perfect for your farmers market trips or a day at the beach. Sturdy and washable.',
-    image: '/images/product8.jpeg',
+    name: 'Shoulder Bag',
+    price: 2800,
+    description: 'A stylish shoulder bag made of canvas with pattern printed, offering durability and a trendy look for everyday carry.',
+    image: '/images/totes 2.jpeg',
     category: 'Totes',
-    dataAiHint: 'canvas tote'
+    dataAiHint: 'canvas shoulder bag'
   },
   {
     id: '10',
-    name: 'Leather Laptop Tote',
-    price: 189.99,
-    description: 'A sophisticated tote with a padded compartment for your laptop. Perfect for the professional on the go, combining style and function.',
-    image: 'https://placehold.co/800x800.png',
+    name: 'Leather Bag',
+    price: 2100,
+    description: 'A premium leather bag made of PU leather, providing elegance and durability for professional and casual use.',
+    image: '/images/totes 3.jpeg',
     category: 'Totes',
-    dataAiHint: 'professional tote'
+    dataAiHint: 'PU leather bag'
   },
-  {
-    id: '11',
-    name: 'Quilted Camera Crossbody',
-    price: 95.00,
-    description: 'A chic, quilted crossbody bag perfect for carrying your camera and other small essentials. Features an adjustable strap for comfort.',
-    image: 'https://placehold.co/800x800.png',
-    category: 'Crossbody',
-    dataAiHint: 'quilted crossbody'
-  },
-  {
-    id: '12',
-    name: 'Sporty Nylon Crossbody',
-    price: 65.00,
-    description: 'Lightweight and durable, this nylon crossbody is perfect for active days. Multiple zip pockets keep you organized on the move.',
-    image: 'https://placehold.co/800x800.png',
-    category: 'Crossbody',
-    dataAiHint: 'nylon bag'
-  },
-  {
-    id: '13',
-    name: 'Tech Commuter Backpack',
-    price: 175.00,
-    description: 'A sleek backpack designed for the modern commuter. Features multiple compartments for all your tech gadgets and a USB charging port.',
-    image: 'https://placehold.co/800x800.png',
-    category: 'Backpacks',
-    dataAiHint: 'tech backpack'
-  },
-  {
-    id: '14',
-    name: 'Hiking Daypack',
-    price: 135.00,
-    description: 'A rugged and comfortable daypack for your next hiking adventure. Features hydration pack compatibility and ergonomic shoulder straps.',
-    image: 'https://placehold.co/800x800.png',
-    category: 'Backpacks',
-    dataAiHint: 'hiking backpack'
-  },
-  {
-    id: '15',
-    name: 'Sequin Party Clutch',
-    price: 75.00,
-    description: 'Dazzle at your next party with this eye-catching sequin clutch. The perfect accessory to make your outfit pop.',
-    image: 'https://placehold.co/800x800.png',
-    category: 'Clutches',
-    dataAiHint: 'sequin clutch'
-  },
+
+
+
   {
     id: '16',
-    name: 'Woven Slouchy Hobo',
-    price: 130.00,
-    description: 'A beautifully woven hobo bag with a slouchy, relaxed fit. Adds a touch of artisanal charm to any outfit.',
-    image: 'https://placehold.co/800x800.png',
-    category: 'Hobo Bags',
-    dataAiHint: 'woven bag'
+    name: 'Single Bag 2',
+    price: 2500,
+    description: 'An elegant woven single bag with a relaxed silhouette. Crafted with attention to detail, this bag offers both style and practicality for everyday elegance.',
+    image: '/images/singel-2.jpeg',
+    category: 'Single Bags',
+    dataAiHint: 'elegant woven bag'
   },
-  {
-    id: '17',
-    name: 'Vintage-Inspired Satchel',
-    price: 165.00,
-    description: 'A charming satchel with a vintage feel. Features buckle details and a classic top handle, plus a detachable shoulder strap.',
-    image: 'https://placehold.co/800x800.png',
-    category: 'Satchels',
-    dataAiHint: 'vintage satchel'
-  },
+
   {
     id: '18',
-    name: 'Convertible Crossbody Tote',
-    price: 145.00,
-    description: 'The ultimate versatile bag. Wear it as a tote or fold it over to use as a crossbody for a more compact look.',
-    image: 'https://placehold.co/800x800.png',
+    name: 'Hand Bag Set',
+    price: 2700,
+    description: 'A versatile hand bag set made of PU leather, designed for style and functionality in various settings.',
+    image: '/images/totes 4.jpeg',
     category: 'Totes',
-    dataAiHint: 'convertible tote'
+    dataAiHint: 'PU leather hand bag set'
+  },
+
+  {
+    id: '21',
+    name: 'Single Bag 3',
+    price: 2500,
+    description: 'A compact and versatile single bag ideal for professionals on the go. Features multiple compartments for organization and a durable build for long-lasting use.',
+    image: '/images/singel-3.jpeg',
+    category: 'Single Bags',
+    dataAiHint: 'professional single bag'
   },
   {
-    id: '19',
-    name: 'Campus Bookbag',
-    price: 99.00,
-    description: 'A classic bookbag perfect for students. Durable, spacious, and with plenty of pockets for books, a laptop, and supplies.',
-    image: 'https://placehold.co/800x800.png',
+    id: '22',
+    name: 'Single Bag 4',
+    price: 2600,
+    description: 'The premium single bag in our collection, offering superior craftsmanship and design. Perfect for those who appreciate quality and sophistication in their accessories.',
+    image: '/images/singel-4.jpeg',
+    category: 'Single Bags',
+    dataAiHint: 'premium single bag'
+  },
+  {
+    id: '23',
+    name: 'Backpack 1',
+    price: 2500,
+    description: 'A versatile backpack with multiple zips for easy access, durable materials for long-lasting use, and soft straps for comfortable carrying.',
+    image: '/images/bagpack1.jpeg',
     category: 'Backpacks',
-    dataAiHint: 'student bookbag'
+    dataAiHint: 'versatile backpack'
   },
   {
-    id: '20',
-    name: 'Everyday Phone Crossbody',
-    price: 55.00,
-    description: 'Just the essentials. This mini crossbody is perfectly sized for your phone, cards, and keys for when you want to travel light.',
-    image: 'https://placehold.co/800x800.png',
+    id: '24',
+    name: 'Backpack 2',
+    price: 2600,
+    description: 'A reliable backpack featuring multiple zips for organization, durable construction to withstand daily wear, and soft straps for all-day comfort.',
+    image: '/images/bagpack2.jpeg',
+    category: 'Backpacks',
+    dataAiHint: 'reliable backpack'
+  },
+  {
+    id: '25',
+    name: 'Backpack 3',
+    price: 2700,
+    description: 'An essential backpack with multiple zips for quick access, durable fabric for durability, and soft straps designed for ergonomic comfort.',
+    image: '/images/bagpack3.jpeg',
+    category: 'Backpacks',
+    dataAiHint: 'essential backpack'
+  },
+  {
+    id: '26',
+    name: 'Backpack 4',
+    price: 2700,
+    description: 'A premium backpack with double compartments for better organization, USB ports for charging your devices on the go, and a secure lock for added protection.',
+    image: '/images/bagpack4.jpeg',
+    category: 'Backpacks',
+    dataAiHint: 'premium backpack'
+  },
+  {
+    id: '27',
+    name: 'Sky Blue Six-in-One Bagset',
+    price: 2999,
+    description: 'Complete bag set including main bag, pockets, geometry pouch, water bottle holder, shoulder bag, etc. Impressively designed with durable zips for long-lasting use.',
+    image: '/images/six-1.jpeg',
+    category: 'six-in-one bagset',
+    dataAiHint: 'complete bag set'
+  },
+  {
+    id: '28',
+    name: 'Black Six-in-One Bagset',
+    price: 2999,
+    description: 'Complete bag set including main bag, pockets, geometry pouch, water bottle holder, shoulder bag, etc. Impressively designed with durable zips for long-lasting use.',
+    image: '/images/six-2.jpeg',
+    category: 'six-in-one bagset',
+    dataAiHint: 'complete bag set'
+  },
+  {
+    id: '29',
+    name: 'Dark Blue Six-in-One Bagset',
+    price: 2999,
+    description: 'Complete bag set including main bag, pockets, geometry pouch, water bottle holder, shoulder bag, etc. Impressively designed with durable zips for long-lasting use.',
+    image: '/images/six-3.jpeg',
+    category: 'six-in-one bagset',
+    dataAiHint: 'complete bag set'
+  },
+  {
+    id: '30',
+    name: 'Cyan Six-in-One Bagset',
+    price: 2999,
+    description: 'Complete bag set including main bag, pockets, geometry pouch, water bottle holder, shoulder bag, etc. Impressively designed with durable zips for long-lasting use.',
+    image: '/images/six-4.jpeg',
+    category: 'six-in-one bagset',
+    dataAiHint: 'complete bag set'
+  },
+  {
+    id: '31',
+    name: 'College Bag Set 1',
+    price: 2500,
+    description: 'College bag set with features like durable material, multiple compartments for books and essentials, adjustable straps, and water-resistant design for everyday student use.',
+    image: '/images/college 1.jpeg',
+    category: 'College Bags',
+    dataAiHint: 'college bag set'
+  },
+  {
+    id: '32',
+    name: 'College Bag Set 2',
+    price: 2350,
+    description: 'College bag set featuring durable fabric, spacious interior with organized pockets, padded shoulder straps for comfort, and reinforced stitching for long-lasting durability.',
+    image: '/images/college 2.jpeg',
+    category: 'College Bags',
+    dataAiHint: 'college bag set'
+  },
+  {
+    id: '33',
+    name: 'College Bag Set 3',
+    price: 2350,
+    description: 'College bag set with durable construction, multiple compartments including laptop sleeve, front pockets for quick access, and ergonomic design for comfortable carrying.',
+    image: '/images/college 3.jpeg',
+    category: 'College Bags',
+    dataAiHint: 'college bag set'
+  },
+  {
+    id: '34',
+    name: 'College Bag Set 4',
+    price: 2500,
+    description: 'Premium college bag set made with high-quality durable materials, featuring reinforced handles, multiple zippered compartments, and weather-resistant coating for all-season use.',
+    image: '/images/college 4.jpeg',
+    category: 'College Bags',
+    dataAiHint: 'college bag set'
+  },
+  {
+    id: '35',
+    name: 'Mobile Phone Bag',
+    price: 1400,
+    description: 'A compact mobile phone bag made of synthetic leather, perfect for carrying your phone and essentials securely.',
+    image: '/images/crossbody1.jpeg',
     category: 'Crossbody',
-    dataAiHint: 'phone crossbody'
+    dataAiHint: 'synthetic leather phone bag'
+  },
+  {
+    id: '36',
+    name: 'Crossbody Bag',
+    price: 1600,
+    description: 'A stylish crossbody bag made of PU leather, offering durability and a sleek design for everyday use.',
+    image: '/images/crossbody2.jpeg',
+    category: 'Crossbody',
+    dataAiHint: 'PU leather crossbody'
+  },
+  {
+    id: '37',
+    name: 'Plain Cross Body Bags',
+    price: 1700,
+    description: 'Simple and elegant plain cross body bags made of rexine, providing a versatile and affordable option for daily carry.',
+    image: '/images/crossbody 3.jpeg',
+    category: 'Crossbody',
+    dataAiHint: 'rexine crossbody'
+  },
+  {
+    id: '38',
+    name: 'Cross Body Bag',
+    price: 1800,
+    description: 'A premium cross body bag made of PU leather, featuring adjustable straps and multiple compartments for style and functionality.',
+    image: '/images/crossbody 4.png',
+    category: 'Crossbody',
+    dataAiHint: 'PU leather crossbody bag'
+  },
+  {
+    id: '39',
+    name: 'Travelling Bag 1',
+    price: 2700,
+    description: 'A travelling bag with double feature lock and USB port for convenience and security during trips.',
+    image: '/images/travel 1.jpeg',
+    category: 'Travelling Bags',
+    dataAiHint: 'travelling bag'
+  },
+  {
+    id: '40',
+    name: 'Travelling Bag 2',
+    price: 3500,
+    description: 'A maternity bag with connecting strands and six zips for organized storage and easy access.',
+    image: '/images/travel 2.jpeg',
+    category: 'Travelling Bags',
+    dataAiHint: 'travelling bag'
+  },
+  {
+    id: '41',
+    name: 'Travelling Bag 3',
+    price: 2500,
+    description: 'A high capacity travelling bag with multiple zips for ample space and secure storage.',
+    image: '/images/travel 3.jpeg',
+    category: 'Travelling Bags',
+    dataAiHint: 'travelling bag'
+  },
+  {
+    id: '42',
+    name: 'Travelling Bag 4',
+    price: 3500,
+    description: 'A travelling bag with multiple zips, high capacity, and easy to carry design for comfortable travel.',
+    image: '/images/travel 4.jpeg',
+    category: 'Travelling Bags',
+    dataAiHint: 'travelling bag'
+  },
+  {
+    id: '43',
+    name: 'New Arrival 1',
+    price: 3150,
+    description: 'Complete bag set with bag, shoulder bag, pouches and geometry for versatile and stylish carry.',
+    image: '/images/new 1.jpeg',
+    category: 'New Arrival',
+    dataAiHint: 'new arrival bag set'
+  },
+  {
+    id: '44',
+    name: 'New Arrival 2',
+    price: 3150,
+    description: 'Complete bag set with bag, shoulder bag, pouches and geometry for versatile and stylish carry.',
+    image: '/images/new 2.jpeg',
+    category: 'New Arrival',
+    dataAiHint: 'new arrival bag set'
+  },
+  {
+    id: '45',
+    name: 'New Arrival 3',
+    price: 3150,
+    description: 'Complete bag set with bag, shoulder bag, pouches and geometry for versatile and stylish carry.',
+    image: '/images/new 3.jpeg',
+    category: 'New Arrival',
+    dataAiHint: 'new arrival bag set'
+  },
+  {
+    id: '46',
+    name: 'New Arrival 4',
+    price: 3150,
+    description: 'Complete bag set with bag, shoulder bag, pouches and geometry for versatile and stylish carry.',
+    image: '/images/new 4.jpeg',
+    category: 'New Arrival',
+    dataAiHint: 'new arrival bag set'
   }
 ];
 
